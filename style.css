@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("background.webp") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%; /* Изменение отступов для адаптации */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100%;
+    background-color: transparent;
+}
+
+.logo {
+    font-size: 2.5vw; /* Изменение размера шрифта для адаптации */
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.7vw;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 2vw;
+    margin-right: 3vw;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0.15vw;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.info {
+    margin-right: 45%;
+    padding-top: 10%;
+    margin-top: 5vh;
+    color: #fff;
+    text-align: center;
+}
+
+.info h1 {
+    font-size: 5vw;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 2.5vw;
+    font-weight: 500;
+    margin-top: 1.5vh;
+}
+
+.description {
+    color: #fff;
+    padding-top: 7%;
+    margin-left: 5%;
+    margin-right: 50%;
+}
+
+.description p {
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+/* Медиазапросы для различных разрешений */
+@media screen and (min-width: 1440px) {
+    .header {
+        padding: 20px 10%;
+    }
+    .navbar a {
+        margin-left: 3vw;
+        margin-right: 5vw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .header {
+        padding: 20px 15%;
+    }
+    .navbar a {
+        margin-left: 4vw;
+        margin-right: 6vw;
+    }
+}
+
+/* Медиазапрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+    }
+    .logo {
+        font-size: 4vw;
+    }
+    .navbar a {
+        font-size: 3vw;
+        margin-left: 3vw;
+        margin-right: 5vw;
+    }
+    .info {
+        margin-right: 5%;
+        padding-top: 10vh;
+        margin-top: 10vh;
+    }
+    .info h1 {
+        font-size: 6vw;
+    }
+    .info p {
+        font-size: 3.5vw;
+        margin-top: 2vh;
+    }
+    .description {
+        padding-top: 3vh;
+    }
+    .description p {
+        font-size: 2.5vw;
+    }
+}
