@@ -15,12 +15,16 @@ body {
     margin: 0;
 }
 
+main{
+    margin-top: 80px;
+}
+
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 5%; /* Изменение отступов для адаптации */
+    padding: 20px 5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,12 +33,14 @@ body {
 }
 
 .logo {
-    font-size: 2.5vw; /* Изменение размера шрифта для адаптации */
+    font-size: 2.5vw; 
     color: #fff;
     font-weight: 700;
     text-decoration: none;
 }
-
+.navbar{
+    display: flex;
+}
 .navbar a {
     position: relative;
     font-size: 1.7vw;
@@ -62,10 +68,18 @@ body {
 
 .info {
     margin-right: 45%;
-    padding-top: 10%;
-    margin-top: 5vh;
+    padding-top: 15%;
+    margin-top: 4vh;
     color: #fff;
     text-align: center;
+    opacity: 0; 
+    transform: translateX(-100px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-fade-in-left {
+    opacity: 1; 
+    transform: translateX(0); 
 }
 
 .info h1 {
@@ -84,14 +98,214 @@ body {
     padding-top: 7%;
     margin-left: 5%;
     margin-right: 50%;
+    text-align: center;
+    opacity: 0; 
+    transform: translateX(-100px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
+.animate-fade-in-left1 {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
 
 .description p {
     font-size: 1.5vw;
     font-weight: 500;
 }
 
-/* Медиазапросы для различных разрешений */
+.skills1{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2%;
+    opacity: 0; 
+    transform: translateX(-100px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.skills1 p {
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-top: 1.5%;
+}
+.skills1 p:last-child {
+    margin-bottom: 3%; 
+}
+
+.skills1.show1 {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+.skills2{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2%;
+    opacity: 0; 
+    transform: translateX(-100px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.skills2 p {
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-top: 1.5%;
+}
+.skills2 p:last-child {
+    margin-bottom: 3%; 
+}
+
+.skills2.show2 {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+
+h1{
+    color: #fff;
+    font-size: 3.5vw;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.contacts {
+    padding-top: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0; 
+    transform: translateX(100px); 
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contacts.show {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+.contact-item {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 2.7vw;
+    color: #fff;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: 5px; 
+    border-radius: 8px; 
+    transition: box-shadow 0.3s ease; 
+}
+
+.contact-item a:hover {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); 
+}
+
+.contact-item a:visited {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.contact-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        text-align: center;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .contacts {
+        font-size: 18px; 
+    }
+}
+
+@media screen and (min-width: 2160px) {
+    .contacts {
+        font-size: 20px; 
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .skills1 {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 2%;
+    }
+    .skills1 p {
+        font-size: 1.5vw;
+        margin-top: 1.5%;
+    }
+    .skills1 p:last-child {
+        margin-bottom: 3%; 
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .skills1 {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 2%;
+    }
+    .skills1 p {
+        font-size: 3vw;
+        margin-top: 3%;
+    }
+    .skills1 p:last-child {
+        margin-bottom: 5%; 
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .skills2 {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 2%;
+    }
+    .skills2 p {
+        font-size: 1.5vw;
+        margin-top: 1.5%;
+    }
+    .skills2 p:last-child {
+        margin-bottom: 3%; 
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .skills2 {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-top: 2%;
+    }
+    .skills2 p {
+        font-size: 3vw;
+        margin-top: 3%;
+    }
+    .skills2 p:last-child {
+        margin-bottom: 5%; 
+    }
+}
 @media screen and (min-width: 1440px) {
     .header {
         padding: 20px 10%;
@@ -112,7 +326,6 @@ body {
     }
 }
 
-/* Медиазапрос для мобильных устройств */
 @media screen and (max-width: 768px) {
     .header {
         padding: 20px 5%;
