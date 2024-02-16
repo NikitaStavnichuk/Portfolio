@@ -32,6 +32,7 @@ main{
     background-color: transparent;
 }
 
+
 .logo {
     font-size: 2.5vw; 
     color: #fff;
@@ -219,6 +220,51 @@ h1{
     margin-right: 10px;
 }
 
+nav{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 2%;
+}
+
+.oop {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-top: 1.5%;
+}
+
+.menu-link {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+}
+
+.menu-link:hover {
+    color: #fff;
+}
+
+.menu-link:hover:before {
+    transform: scaleX(1);
+    transition: transform 0.35s;
+}
+
+.menu-link:before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0; bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+    transform-origin: left;
+}
+
 @media screen and (max-width: 768px) {
     .contacts {
         text-align: center;
@@ -234,6 +280,8 @@ h1{
         margin-bottom: 10px;
     }
 }
+
+
 
 @media screen and (min-width: 1920px) {
     .contacts {
@@ -355,5 +403,23 @@ h1{
     }
     .description p {
         font-size: 2.5vw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .oop {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* Стили для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .oop {
+        display: block;
+    }
+
+    .menu-link {
+        margin-bottom: 20px;
     }
 }
