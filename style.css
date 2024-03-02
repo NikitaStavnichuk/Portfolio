@@ -125,6 +125,10 @@ main{
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+.skills1 h1{
+    text-align: left;
+}
+
 .skills1 p {
     color: #fff;
     font-size: 1.5vw;
@@ -140,35 +144,11 @@ main{
     transform: translateX(0); 
 }
 
-.skills2{
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-top: 2%;
-    opacity: 0; 
-    transform: translateX(-100px); 
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.skills2 p {
-    color: #fff;
-    font-size: 1.5vw;
-    font-weight: 500;
-    margin-top: 1.5%;
-}
-.skills2 p:last-child {
-    margin-bottom: 3%; 
-}
-
-.skills2.show2 {
-    opacity: 1; 
-    transform: translateX(0); 
-}
-
 
 h1{
     color: #fff;
     font-size: 3.5vw;
-    font-weight: 600;
+    font-weight: 900;
     text-align: center;
     padding-top: 5%;
 }
@@ -413,7 +393,6 @@ nav{
     }
 }
 
-/* Стили для мобильных устройств */
 @media screen and (max-width: 768px) {
     .oop {
         display: block;
