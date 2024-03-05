@@ -1,14 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var infoElement = document.querySelector('.info');
-    var descriptionElement = document.querySelector('.description');
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        document.querySelector('.info').classList.add('show3');
+    }, 780); 
+});
 
-    setTimeout(function() {
-        infoElement.classList.add('animate-fade-in-left');
-    }, 780);
-
-    setTimeout(function() {
-        descriptionElement.classList.add('animate-fade-in-left1');
-    }, 1000);
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        document.querySelector('.description').classList.add('show4');
+    }, 1000); 
 });
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -9,7 +9,7 @@
 
 body {
     min-height: 100vh;
-    background: url("background.webp") no-repeat;
+    background: url("background.webp");
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -68,6 +68,10 @@ main{
     width: 100%;
 }
 
+.image-container {
+    display: none;
+}
+
 .info {
     margin-right: 45%;
     padding-top: 15%;
@@ -77,11 +81,6 @@ main{
     opacity: 0; 
     transform: translateX(-100px); 
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.animate-fade-in-left {
-    opacity: 1; 
-    transform: translateX(0); 
 }
 
 .info h1 {
@@ -95,6 +94,11 @@ main{
     margin-top: 1.5vh;
 }
 
+.info.show3 {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
 .description {
     color: #fff;
     padding-top: 7%;
@@ -106,15 +110,14 @@ main{
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-.animate-fade-in-left1 {
-    opacity: 1; 
-    transform: translateX(0); 
-}
-
-
 .description p {
     font-size: 1.5vw;
     font-weight: 500;
+}
+
+.description.show4 {
+    opacity: 1; 
+    transform: translateX(0); 
 }
 
 .skills1{
@@ -364,27 +367,53 @@ nav{
         font-size: 4vw;
     }
     .navbar a {
-        font-size: 3vw;
+        font-size: 4vw;
         margin-left: 3vw;
         margin-right: 5vw;
     }
+    .navbar a::before {
+        height: 0.35vw;
+    }
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    .image-container img{
+        margin-top: 4%;
+        width: 350px;
+        height: 350px;
+    }
     .info {
-        margin-right: 5%;
-        padding-top: 10vh;
-        margin-top: 10vh;
+        padding-top: 0;
+        margin-right: 0;
+    }
+    .description{
+        margin-right: 2%;
+        margin-left: 2%;
     }
     .info h1 {
-        font-size: 6vw;
+        padding-top: 0;
+        font-size: 8.5vw;
     }
     .info p {
-        font-size: 3.5vw;
-        margin-top: 2vh;
+        font-size: 4.5vw;
+        margin-top: 1.5vh;
     }
-    .description {
-        padding-top: 3vh;
+    .cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .description p {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
+    }
+    body{
+        min-height: 100vh;
+        background: url("background1.webp");
+        background-size: cover;
+        margin: 0;
     }
 }
 
