@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
-        document.querySelector('.skills2').classList.add('show2');
+        document.querySelector('.operation').classList.add('show2');
     }, 800); 
 });
+
+

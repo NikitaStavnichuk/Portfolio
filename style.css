@@ -41,6 +41,7 @@ main{
 }
 .navbar{
     display: flex;
+    padding-bottom: 3%;
 }
 .navbar a {
     position: relative;
@@ -144,7 +145,16 @@ main{
     transform: translateX(0); 
 }
 
+.operation{
+    opacity: 0; 
+    transform: translateX(-100px); 
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
+.operation.show2 {
+    opacity: 1; 
+    transform: translateX(0); 
+}
 h1{
     color: #fff;
     font-size: 3.5vw;
@@ -159,7 +169,7 @@ h1{
     flex-direction: column;
     align-items: center;
     opacity: 0; 
-    transform: translateX(100px); 
+    transform: translateX(-100px); 
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -245,6 +255,10 @@ nav{
     transform-origin: left;
 }
 
+.contacts.show .h11{
+   margin-bottom: 7%;
+}
+
 @media screen and (max-width: 768px) {
     .contacts {
         text-align: center;
@@ -303,35 +317,23 @@ nav{
     .skills1 p:last-child {
         margin-bottom: 5%; 
     }
-}
-
-@media screen and (min-width: 1920px) {
-    .skills2 {
-        margin-left: 5%;
-        margin-right: 5%;
-        padding-top: 2%;
+    .skills1 h1{
+        font-size: 5.5vw;
     }
-    .skills2 p {
-        font-size: 1.5vw;
-        margin-top: 1.5%;
+    .h11{
+        font-size: 5.5vw;
     }
-    .skills2 p:last-child {
-        margin-bottom: 3%; 
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .skills2 {
-        margin-left: 5%;
-        margin-right: 5%;
-        padding-top: 2%;
-    }
-    .skills2 p {
+    .oop a{
         font-size: 3vw;
         margin-top: 3%;
     }
-    .skills2 p:last-child {
-        margin-bottom: 5%; 
+    .header a img{
+        width: 32px;
+        height: 32px;
+    }
+    .contact-item a{
+        font-size: 5vw;
+        margin-top: 3%;
     }
 }
 @media screen and (min-width: 1440px) {
@@ -386,17 +388,7 @@ nav{
     }
 }
 
-@media screen and (min-width: 1920px) {
-    .oop {
-        display: flex;
-        justify-content: space-around;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    .oop {
-        display: block;
-    }
 
     .menu-link {
         margin-bottom: 20px;
